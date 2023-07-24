@@ -1,3 +1,5 @@
+/* CSS Reset */
+
 @charset "utf-8";
 /***
     The new CSS reset - version 1.8.5 (last updated 14.6.2023)
@@ -104,4 +106,297 @@ meter {
 /* Revert Modal native behavior */
 :where(dialog:modal) {
 	all: revert;
+}
+
+/* CSS Global Variables */
+
+:root {
+	--white: #ffffff;
+	--green: #1eb589;
+	--red: #dc414c;
+
+	/* Colors that will toggle */
+	--toggle-bg-color: #1d1f29;
+	--toggle-text-primary: #ffffff;
+	--toggle-text-secondary: #8c98c6;
+	--toggle-border-top: #333a55;
+	--toggle-bg-card: #252b42;
+	--toggle-card-hover: #333a55;
+}
+
+/* Global Styles */
+
+/* Fonts */
+
+.heading-l,
+.body-text,
+.text-green,
+.text-red {
+	font-weight: 700;
+}
+
+.heading-xl,
+.heading-l {
+	color: var(--toggle-text-primary);
+}
+
+.text-green,
+.text-red,
+.uppercase {
+	font-size: 12px;
+}
+
+.body-text,
+.uppercase {
+	color: var(--toggle-text-secondary);
+}
+
+.heading-xl {
+	font-size: 56px;
+}
+
+.heading-l {
+	font-size: 1.5rem;
+	font-size: clamp(1.5rem, 1.45rem + 0.25vw, 1.75rem);
+}
+
+.body-text {
+	font-size: 14px;
+}
+
+.text-green {
+	color: var(--green);
+}
+
+.text-red {
+	color: var(--red);
+}
+
+.uppercase {
+	text-transform: uppercase;
+	letter-spacing: 0.5rem;
+}
+
+/* Borders */
+
+.border-blue,
+.border-instagram,
+.border-red {
+	padding-top: 5px;
+	border-radius: 10px;
+}
+
+.border-blue {
+	background-color: #178ff5;
+}
+
+.border-instagram {
+	background: linear-gradient(
+		270deg,
+		rgba(223, 72, 150, 1) 0%,
+		rgba(238, 135, 126, 1) 50%,
+		rgba(253, 195, 102, 1) 100%
+	);
+}
+
+.border-red {
+	background: var(--red);
+}
+
+/* Icons */
+
+.social-icons {
+	width: 20px;
+	height: 20px;
+}
+
+/* Sections */
+
+body,
+.upper-section,
+.upper-section-toggle-div {
+	display: flex;
+}
+
+.upper-section,
+.upper-section-toggle-div {
+	justify-content: space-between;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: var(--toggle-bg-color);
+	margin: 20px;
+	justify-content: center;
+	transition: 0.2s ease-in;
+}
+
+.container {
+	width: 100%;
+	max-width: 1110px;
+}
+
+.upper-section {
+	flex-direction: column;
+	margin-top: 30px;
+}
+
+.upper-section-toggle-div {
+	align-items: center;
+	border-top: 1px solid var(--toggle-border-top);
+	margin-top: 25px;
+	padding-top: 20px;
+}
+
+.upper-section-toggle-div p {
+	margin-right: 20px;
+}
+
+/* Grids */
+
+.card-grid {
+	margin-top: 32px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 30px;
+	row-gap: 20px;
+}
+
+/* Cards */
+
+.card-vertical,
+.card-horizontal,
+.card-horizontal-row,
+.card-horizontal-row-stats,
+.card-vertical-icon-container,
+.card-vertical-lower {
+	display: flex;
+}
+
+.card-vertical,
+.card-horizontal {
+	padding: 30px;
+	border-radius: 10px;
+	background-color: var(--toggle-bg-card);
+	background-color: var(--toggle-bg-card);
+	flex-direction: column;
+}
+
+.card-vertical,
+.card-horizontal {
+	justify-content: center;
+}
+
+.card-vertical:hover,
+.card-horizontal:hover {
+	background-color: var(--toggle-card-hover);
+}
+
+.card-vertical,
+.card-horizontal-row,
+.card-horizontal-row-stats,
+.card-vertical-icon-container,
+.card-vertical-lower {
+	align-items: center;
+}
+
+.card-horizontal-row-stats img,
+.card-vertical-icon-container img,
+.card-vertical-lower img {
+	margin-right: 10px;
+}
+
+.card-horizontal * {
+	margin: 5px 0px 5px 0px;
+}
+
+.card-horizontal-row {
+	justify-content: space-between;
+}
+
+.card-vertical * {
+	margin-bottom: 10px;
+}
+
+/* Rounded toggle switch */
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: var(--white);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+/* End Rounded Toggle Switch */
+
+/* Media Queries */
+
+@media only screen and (min-width: 600px) {
+	.upper-section {
+		flex-direction: row;
+	}
+	.upper-section-toggle-div {
+		padding: 0px;
+		margin-top: 0px;
+		border-top: none;
+	}
+}
+
+.lower-section {
+	margin-top: 30px;
 }

@@ -7,15 +7,302 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
 			rel="stylesheet"
 			href="style.css"
 		/>
 		<title>Social Media Dashboard</title>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="/images/favicon-32x32.png"
+		/>
 	</head>
-	<body>
-		<script
-			src="script.js"
-			defer
-		></script>
+	<body id="root">
+		<div class="container">
+			<section class="upper-section">
+				<div class="title-div">
+					<h1 class="heading-l">Social Media Dashboard</h1>
+					<p class="body-text">Total Followers: 23,004</p>
+				</div>
+				<div class="upper-section-toggle-div">
+					<p class="body-text">Dark Mode</p>
+					<label class="switch">
+						<input
+							type="checkbox"
+							onclick="toggleTheme()"
+						/>
+						<span class="slider round"></span>
+					</label>
+				</div>
+			</section>
+
+			<section class="card-grid">
+				<div class="border-blue">
+					<div class="card-vertical">
+						<div class="card-vertical-icon-container">
+							<img
+								class="social-icons"
+								src="images/icon-facebook.svg"
+								alt="Facebook logo"
+							/>
+							<p class="body-text">@nathanf</p>
+						</div>
+						<h2 class="heading-xl">1987</h2>
+						<h3 class="uppercase">Followers</h3>
+						<div class="card-vertical-lower">
+							<img
+								src="images/icon-up.svg"
+								alt="Up icon"
+							/>
+							<p class="text-green">12 Today</p>
+						</div>
+					</div>
+				</div>
+				<div class="border-blue">
+					<div class="card-vertical">
+						<div class="card-vertical-icon-container">
+							<img
+								class="social-icons"
+								src="images/icon-twitter.svg"
+								alt="Facebook logo"
+							/>
+							<p class="body-text">@nathanf</p>
+						</div>
+						<h2 class="heading-xl">1044</h2>
+						<h3 class="uppercase">Followers</h3>
+						<div class="card-vertical-lower">
+							<img
+								src="images/icon-up.svg"
+								alt="Up icon"
+							/>
+							<p class="text-green">99 Today</p>
+						</div>
+					</div>
+				</div>
+				<div class="border-instagram">
+					<div class="card-vertical purple-gradient-border">
+						<div class="card-vertical-icon-container">
+							<img
+								src="images/icon-instagram.svg"
+								alt="Instagram logo"
+							/>
+							<p class="body-text">@realnathanf</p>
+						</div>
+						<h2 class="heading-xl">11K</h2>
+						<h3 class="uppercase">Followers</h3>
+						<div class="card-vertical-lower">
+							<img
+								src="images/icon-up.svg"
+								alt="Down icon"
+							/>
+							<p class="text-green">1099 Today</p>
+						</div>
+					</div>
+				</div>
+				<div class="border-red">
+					<div class="card-vertical">
+						<div class="card-vertical-icon-container">
+							<img
+								src="images/icon-facebook.svg"
+								alt="Facebook logo"
+							/>
+							<p class="body-text">@Nathan F.</p>
+						</div>
+						<h2 class="heading-xl">8239</h2>
+						<h3 class="uppercase">Subscribers</h3>
+						<div class="card-vertical-lower">
+							<img
+								src="images/icon-down.svg"
+								alt="Down icon"
+							/>
+							<p class="text-red">144 Today</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="lower-section">
+				<h2 class="heading-l">Overview Today</h2>
+				<div class="card-grid">
+					<div class="card-horizontal">
+						<div class="card-horizontal-row">
+							<p class="body-text">Page Views</p>
+							<img
+								class="social-icons"
+								src="images/icon-facebook.svg"
+								alt="Facebook icon"
+							/>
+						</div>
+						<div class="card-horizontal-row">
+							<h3 class="heading-l">87</h3>
+							<div class="card-horizontal-row-stats">
+								<img
+									src="images/icon-up.svg"
+									alt="Up icon"
+								/>
+								<p class="text-green">3%</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-horizontal">
+						<div class="card-horizontal-row">
+							<p class="body-text">Likes</p>
+							<img
+								class="social-icons"
+								src="images/icon-facebook.svg"
+								alt="Facebook icon"
+							/>
+						</div>
+						<div class="card-horizontal-row">
+							<h3 class="heading-l">52</h3>
+							<div class="card-horizontal-row-stats">
+								<img
+									src="images/icon-down.svg"
+									alt="Down icon"
+								/>
+								<p class="text-red">2%</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-horizontal">
+						<div class="card-horizontal-row">
+							<p class="body-text">Likes</p>
+							<img
+								class="social-icons"
+								src="images/icon-instagram.svg"
+								alt="Instagram icon"
+							/>
+						</div>
+						<div class="card-horizontal-row">
+							<h3 class="heading-l">5462</h3>
+							<div class="card-horizontal-row-stats">
+								<img
+									src="images/icon-up.svg"
+									alt="Up icon"
+								/>
+								<p class="text-green">2257%</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-horizontal">
+						<div class="card-horizontal-row">
+							<p class="body-text">Profile Views</p>
+							<img
+								class="social-icons"
+								src="images/icon-instagram.svg"
+								alt="Instagram icon"
+							/>
+						</div>
+						<div class="card-horizontal-row">
+							<h3 class="heading-l">52K</h3>
+							<div class="card-horizontal-row-stats">
+								<img
+									src="images/icon-up.svg"
+									alt="Up icon"
+								/>
+								<p class="text-green">1375%</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-horizontal">
+						<div class="card-horizontal-row">
+							<p class="body-text">Retweets</p>
+							<img
+								class="social-icons"
+								src="images/icon-twitter.svg"
+								alt="Twitter icon"
+							/>
+						</div>
+						<div class="card-horizontal-row">
+							<h3 class="heading-l">117</h3>
+							<div class="card-horizontal-row-stats">
+								<img
+									src="images/icon-up.svg"
+									alt="Up icon"
+								/>
+								<p class="text-green">303%</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-horizontal">
+						<div class="card-horizontal-row">
+							<p class="body-text">Likes</p>
+							<img
+								class="social-icons"
+								src="images/icon-twitter.svg"
+								alt="Twitter icon"
+							/>
+						</div>
+						<div class="card-horizontal-row">
+							<h3 class="heading-l">507</h3>
+							<div class="card-horizontal-row-stats">
+								<img
+									src="images/icon-up.svg"
+									alt="Up icon"
+								/>
+								<p class="text-green">553%</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-horizontal">
+						<div class="card-horizontal-row">
+							<p class="body-text">Likes</p>
+							<img
+								class="social-icons"
+								src="images/icon-youtube.svg"
+								alt="YouTube icon"
+							/>
+						</div>
+						<div class="card-horizontal-row">
+							<h3 class="heading-l">107</h3>
+							<div class="card-horizontal-row-stats">
+								<img
+									src="images/icon-down.svg"
+									alt="Down icon"
+								/>
+								<p class="text-red">19%</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-horizontal">
+						<div class="card-horizontal-row">
+							<p class="body-text">Total Views</p>
+							<img
+								class="social-icons"
+								src="images/icon-youtube.svg"
+								alt="YouTube icon"
+							/>
+						</div>
+						<div class="card-horizontal-row">
+							<h3 class="heading-l">1407</h3>
+							<div class="card-horizontal-row-stats">
+								<img
+									src="images/icon-down.svg"
+									alt="Down icon"
+								/>
+								<p class="text-red">12%</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<script
+				src="script.js"
+				defer
+			></script>
+		</div>
 	</body>
 </html>
