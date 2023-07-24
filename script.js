@@ -12,6 +12,7 @@ const toggleTheme = () => {
 				'--toggle-border-top': '#FFFFFF',
 				'--toggle-bg-card': '#F1F3FA',
 				'--toggle-card-hover': '#E1E4F0',
+				'--toggle-gradient': '#AEB3CB',
 		  })
 		: (updatedVariables = {
 				'--toggle-bg-color': '#1d1f29',
@@ -20,11 +21,11 @@ const toggleTheme = () => {
 				'--toggle-border-top': '#333a55',
 				'--toggle-bg-card': '#252b42',
 				'--toggle-card-hover': '#333a55',
+				'--toggle-gradient':
+					'linear-gradient(270deg, rgba(64, 219, 130, 1) 0%, rgba(56, 143, 231, 1) 100%)',
 		  });
 
 	for (const variable in updatedVariables) {
 		body.style.setProperty(variable, updatedVariables[variable]);
 	}
-
-	return body.style;
 };

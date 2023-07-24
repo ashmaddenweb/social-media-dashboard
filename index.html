@@ -31,23 +31,25 @@
 		/>
 	</head>
 	<body id="root">
-		<div class="container">
-			<section class="upper-section">
-				<div class="title-div">
-					<h1 class="heading-l">Social Media Dashboard</h1>
-					<p class="body-text">Total Followers: 23,004</p>
-				</div>
-				<div class="upper-section-toggle-div">
-					<p class="body-text">Dark Mode</p>
-					<label class="switch">
-						<input
-							type="checkbox"
-							onclick="toggleTheme()"
-						/>
-						<span class="slider round"></span>
-					</label>
-				</div>
-			</section>
+		<main class="container">
+			<div class="upper-section-full-bg">
+				<section class="upper-section">
+					<div class="title-div">
+						<h1 class="heading-l">Social Media Dashboard</h1>
+						<p class="body-text">Total Followers: 23,004</p>
+					</div>
+					<div class="upper-section-toggle-div">
+						<p class="body-text">Dark Mode</p>
+						<label class="switch">
+							<input
+								type="checkbox"
+								onclick="toggleTheme()"
+							/>
+							<span class="slider round"></span>
+						</label>
+					</div>
+				</section>
+			</div>
 
 			<section class="card-grid">
 				<div class="border-blue">
@@ -303,6 +305,6 @@
 				src="script.js"
 				defer
 			></script>
-		</div>
+		</main>
 	</body>
 </html>

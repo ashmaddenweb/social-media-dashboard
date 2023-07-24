@@ -122,6 +122,11 @@ meter {
 	--toggle-border-top: #333a55;
 	--toggle-bg-card: #252b42;
 	--toggle-card-hover: #333a55;
+	--toggle-gradient: linear-gradient(
+		270deg,
+		rgba(64, 219, 130, 1) 0%,
+		rgba(56, 143, 231, 1) 100%
+	);
 }
 
 /* Global Styles */
@@ -252,6 +257,9 @@ body {
 	margin-right: 20px;
 }
 
+.upper-section-full-bg {
+}
+
 /* Grids */
 
 .card-grid {
@@ -280,6 +288,7 @@ body {
 	background-color: var(--toggle-bg-card);
 	background-color: var(--toggle-bg-card);
 	flex-direction: column;
+	cursor: pointer;
 }
 
 .card-vertical,
@@ -343,7 +352,7 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #ccc;
+	background: var(--toggle-gradient);
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
@@ -355,17 +364,9 @@ body {
 	width: 26px;
 	left: 4px;
 	bottom: 4px;
-	background-color: var(--white);
+	background-color: var(--toggle-bg-color);
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
-}
-
-input:checked + .slider {
-	background-color: #2196f3;
-}
-
-input:focus + .slider {
-	box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
@@ -382,7 +383,6 @@ input:checked + .slider:before {
 .slider.round:before {
 	border-radius: 50%;
 }
-/* End Rounded Toggle Switch */
 
 /* Media Queries */
 
